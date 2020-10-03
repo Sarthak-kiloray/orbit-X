@@ -190,6 +190,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 6d9cb86c6a9cbb7498b2c16aade76cf4, type: 2}
+    - target: {fileID: 1962853294077800766, guid: 347040970b496ba4086308c48e34652b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3384226074015327347, guid: 347040970b496ba4086308c48e34652b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 347040970b496ba4086308c48e34652b, type: 3}
@@ -1153,6 +1158,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 6d9cb86c6a9cbb7498b2c16aade76cf4, type: 2}
+    - target: {fileID: 1962853294077800766, guid: 347040970b496ba4086308c48e34652b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3384226074015327347, guid: 347040970b496ba4086308c48e34652b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 347040970b496ba4086308c48e34652b, type: 3}
@@ -1257,6 +1267,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 6d9cb86c6a9cbb7498b2c16aade76cf4, type: 2}
+    - target: {fileID: 1962853294077800766, guid: 347040970b496ba4086308c48e34652b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3384226074015327347, guid: 347040970b496ba4086308c48e34652b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 347040970b496ba4086308c48e34652b, type: 3}
@@ -1779,7 +1794,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1850013673}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2081161724}
+        m_MethodName: earth
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &1850013673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2101,3 +2127,46 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1063369596}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2081161723
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2081161725}
+  - component: {fileID: 2081161724}
+  m_Layer: 0
+  m_Name: SceneSwitcher
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2081161724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081161723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f68380fae035f6409e1f92348f8e568, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &2081161725
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081161723}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -58.93396, y: 32.53039, z: -75.2905}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
