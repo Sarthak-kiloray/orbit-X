@@ -58,3 +58,10 @@ sysinfo.txt
 # Crashlytics generated file
 unity3d/crashlytics-build.properties
 
+unity3d/Assets/Scenes/solar.unity
+unity3d/Assets/Scripts/*
+unity3d/Assets/magellan
+unity3d/Assets/GoogleVR
+unity3d/Assets/Sounds
+unity3d/Assets/Textures
+unity3d/Assets/Materials/*
