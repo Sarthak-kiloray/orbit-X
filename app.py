@@ -34,6 +34,18 @@ def strela():
 def starlink():
     return render_template("starlink2.html")
 
+@app.route('/yahsat')
+def yahsat():
+    return render_template("yahsat.html")
+
+@app.route('/microstat')
+def microstat():
+    return render_template("microstat.html")
+
+@app.route('/aerocue')
+def aerocue():
+    return render_template("aerocue.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)

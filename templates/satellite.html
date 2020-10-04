@@ -103,12 +103,12 @@
           </div>
           <div id="earth" class="orbit">
             <div class="pos">
-              <div class="orbit">
+              <!-- <div class="orbit">
                 <div class="pos">
                   <div class="moon"></div>
                 </div>
-              </div>
-              <a href="yahsat.html">
+              </div> -->
+              <a href={{ url_for('yahsat') }}>
               <div class="planet">
                 <dl class="infos">
                   <dt>Yahsat-1A (Y1A)</dt>
@@ -120,7 +120,7 @@
           </div>
           <div id="mars" class="orbit">
             <div class="pos">
-              <a href="microstat.html">
+              <a href={{ url_for('microstat') }}>
               <div class="planet">
                 <dl class="infos">
                   <dt>Microsat-TD</dt>
@@ -132,7 +132,7 @@
           </div>
           <div id="jupiter" class="orbit">
             <div class="pos">
-              <a href="aerocue.html">
+              <a href={{ url_for('aerocue') }}>
               <div class="planet">
                 <dl class="infos">
                   <dt>Aerocube 8D</dt>
@@ -812,63 +812,63 @@ body {
 .set-purpose dl.infos dd span:after {
   content: 'Purpose of satellite'; }
 
-.set-purpose #sun dl.infos dd:after {
-  content: '107,218 km/h'; }
+/*.set-purpose #sun dl.infos dd:after {
+  content: '107,218 km/h'; }*/
 
 .set-purpose #mercury dl.infos dd:after {
   content: 'Communications'; }
 
 .set-purpose #venus dl.infos dd:after {
-  content: '126,074 km/h'; }
+  content: 'Communications'; }
 
 .set-purpose #earth dl.infos dd:after {
-  content: '107,218 km/h'; }
+  content: 'Communications'; }
 
 .set-purpose #mars dl.infos dd:after {
-  content: '86,677 km/h'; }
+  content: 'Earth Observation'; }
 
 .set-purpose #jupiter dl.infos dd:after {
-  content: '47,002 km/h'; }
+  content: 'Technology Development'; }
 
 .set-purpose #saturn dl.infos dd:after {
-  content: '34,701 km/h'; }
+  content: 'Communications'; }
 
 .set-purpose #uranus dl.infos dd:after {
-  content: '24,477 km/h'; }
+  content: 'Communications'; }
 
 .set-purpose #neptune dl.infos dd:after {
-  content: '19,566 km/h'; }
+  content: 'Navigation/Global Positioning'; }
 
 /* --------------------------------------------------------------------------- size */
 .set-tof dl.infos dd span:after {
   content: 'Type of Orbit'; }
 
-.set-tof #sun dl.infos dd:after {
-  content: '4,370,005 km'; }
+/*.set-tof #sun dl.infos dd:after {
+  content: '4,370,005 km'; }*/
 
 .set-tof #mercury dl.infos dd:after {
   content: 'Non-Polar Inclined'; }
 
 .set-tof #venus dl.infos dd:after {
-  content: '38,024 km'; }
+  content: 'Polar'; }
 
 .set-tof #earth dl.infos dd:after {
-  content: '40,030 km'; }
+  content: 'Geostationary'; }
 
 .set-tof #mars dl.infos dd:after {
-  content: '21,296 km'; }
+  content: 'Sun-Synchronous'; }
 
 .set-tof #jupiter dl.infos dd:after {
-  content: '439,263 km'; }
+  content: 'Sun-Synchronous'; }
 
 .set-tof #saturn dl.infos dd:after {
-  content: '365,882 km'; }
+  content: 'Geostationary'; }
 
 .set-tof #uranus dl.infos dd:after {
-  content: '159,354 km'; }
+  content: 'Non-Polar Inclined'; }
 
 .set-tof #neptune dl.infos dd:after {
-  content: '154,704 km'; }
+  content: 'Non-Polar Inclined'; }
 
 /* --------------------------------------------------------------------------- distance */
 .set-COSPAR_Number dl.infos dd span:after {
@@ -877,32 +877,32 @@ body {
 .set-COSPAR_Number #sun dl.infos dd span:after {
   content: 'COSPAR_Number'; }
 
-.set-COSPAR_Number #sun dl.infos dd:after {
+/*.set-COSPAR_Number #sun dl.infos dd:after {
   content: '149,598,262 km'; }
-
+*/
 .set-COSPAR_Number #mercury dl.infos dd:after {
-  content: '57,909,227 km'; }
+  content: '2020-001BG'; }
 
 .set-COSPAR_Number #venus dl.infos dd:after {
-  content: '108,209,475 km'; }
+  content: '2004-037B'; }
 
 .set-COSPAR_Number #earth dl.infos dd:after {
-  content: '149,598,262 km'; }
+  content: '2011-016B'; }
 
 .set-COSPAR_Number #mars dl.infos dd:after {
-  content: '227,943,824 km'; }
+  content: '2018-004T'; }
 
 .set-COSPAR_Number #jupiter dl.infos dd:after {
-  content: '778,340,821 km'; }
+  content: '2016-067E'; }
 
 .set-COSPAR_Number #saturn dl.infos dd:after {
-  content: '1,426,666,422 km'; }
+  content: '2006-043A'; }
 
 .set-COSPAR_Number #uranus dl.infos dd:after {
-  content: '2,870,658,186 km'; }
+  content: '2013-005A'; }
 
 .set-COSPAR_Number #neptune dl.infos dd:after {
-  content: '4,498,396,441 km'; }
+  content: '2009-043A'; }
 
 /* --------------------------------------------------------------------------- planets starting position and lighting effect */
 /* --------------------------------------------------------------------------- mercury ; pos: Top */
@@ -914,8 +914,8 @@ body {
 .set-date #sun dl.infos dd span:after {
   content: 'Date of launch'; }
 
-.set-date #sun dl.infos dd:after {
-  content: '2069-6-9'; }
+/*.set-date #sun dl.infos dd:after {
+  content: '2069-6-9'; }*/
 
 .set-date #mercury dl.infos dd:after {
   content: '2020-7-1'; }
@@ -954,11 +954,11 @@ body {
 .set-life #sun dl.infos dd span:after {
   content: 'Expectancy'; }
 
-.set-life #sun dl.infos dd:after {
-  content: '69'; }
+/*.set-life #sun dl.infos dd:after {
+  content: ''; }*/
 
 .set-life #mercury dl.infos dd:after {
-  content: 'NA'; }
+  content: '4 years'; }
 
 .set-life #venus dl.infos dd:after {
   content: '3 years'; }
@@ -996,8 +996,8 @@ body {
 .set-owner #sun dl.infos dd span:after {
   content: 'Origin Country'; }
 
-.set-owner #sun dl.infos dd:after {
-  content: 'Myself'; }
+/*.set-owner #sun dl.infos dd:after {
+  content: ''; }*/
 
 .set-owner #mercury dl.infos dd:after {
   content: 'USA'; }
@@ -1009,7 +1009,7 @@ body {
   content: 'UAE'; }
 
 .set-owner #mars dl.infos dd:after {
-  content: 'CANADA'; }
+  content: 'India'; }
 
 .set-owner #jupiter dl.infos dd:after {
   content: 'USA (private)'; }
@@ -1036,8 +1036,8 @@ body {
 .set-mass #sun dl.infos dd span:after {
   content: 'Dry Mass'; }
 
-.set-mass #sun dl.infos dd:after {
-  content: '4200KG'; }
+/*.set-mass #sun dl.infos dd:after {
+  content: '4200KG'; }*/
 
 .set-mass #mercury dl.infos dd:after {
   content: '227KG'; }
@@ -1077,8 +1077,8 @@ body {
 .set-contractor #sun dl.infos dd span:after {
   content: 'Contracto'; }
 
-.set-contractor #sun dl.infos dd:after {
-  content: 'SpaceX'; }
+/*.set-contractor #sun dl.infos dd:after {
+  content: 'SpaceX'; }*/
 
 .set-contractor #mercury dl.infos dd:after {
   content: 'SpaceX'; }
@@ -1118,8 +1118,8 @@ body {
 .set-site #sun dl.infos dd span:after {
   content: 'Launch Site'; }
 
-.set-site #sun dl.infos dd:after {
-  content: 'Dumping Site'; }
+/*.set-site #sun dl.infos dd:after {
+  content: 'Dumping Site'; }*/
 
 .set-site #mercury dl.infos dd:after {
   content: 'Cape Canaveral'; }
@@ -1159,8 +1159,8 @@ body {
 .set-vehicle #sun dl.infos dd span:after {
   content: 'Launch Vehicle'; }
 
-.set-vehicle #sun dl.infos dd:after {
-  content: 'Satapdi'; }
+/*.set-vehicle #sun dl.infos dd:after {
+  content: 'Satapdi'; }*/
 
 .set-vehicle #mercury dl.infos dd:after {
   content: 'Falcon9'; }
@@ -1766,7 +1766,7 @@ h1 span, #navbar h1 a {
   font: bold small-caps 11px/20px sans-serif; }
 
 .view-3D #controls label.set-view:before {
-  content: '2D';
+  content: '3D';
   margin-left: 82px; }
 
 .view-2D #controls label.set-view:before {
@@ -1994,11 +1994,11 @@ body {
     e.preventDefault();
   });
 
-  $(".set-view").click(function() { body.toggleClass("view-3D view-2D"); });
+  // $(".set-view").click(function() { body.toggleClass("view-3D view-2D"); });
   $(".set-zoom").click(function() { body.toggleClass("zoom-large zoom-close"); });
   $(".set-purpose").click(function() { setView("scale-stretched set-purpose"); });
   $(".set-tof").click(function() { setView("scale-stretched set-tof"); });
-  $(".set-COSPAR_Number").click(function() { setView("scale-stretched set-distance"); });
+  $(".set-COSPAR_Number").click(function() { setView("scale-stretched set-COSPAR_Number"); });
   $(".set-date").click(function() { setView("scale-stretched set-date"); });
   $(".set-life").click(function() { setView("scale-stretched set-life"); });
   $(".set-owner").click(function() { setView("scale-stretched set-owner"); });

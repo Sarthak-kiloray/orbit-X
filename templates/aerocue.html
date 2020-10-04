@@ -4,18 +4,12 @@
 
     <head>
 
-        <!-- Meta Tags -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="author" content="Alessio Santangelo">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui" />
-        <meta name="description" content="">
-        <!-- End Meta Tags -->
+        <title>Aerocube 8D</title>
 
-        <title>Aerocue | Description</title>
-
-        <link rel="shortcut icon" href="images/favicon.png">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
     </head>
 
@@ -29,24 +23,27 @@
                 <span class="menu-line"></span>
             </a>
 
-            
 
-            <a href="#" id="my-name" class="hide-totally">Aerocue</a>
+
+            <a href={{ url_for('satellites') }} id="my-name">View Satellites</a>
 
         </nav>
 
         <div class="wrapper container-fluid">
 
-            <section id="intro" class="full align-center">
+          <section id="intro" class="full align-center">
 
-                <canvas id="intro-canvas"></canvas>
-                
-                <div class="intro-text-wrapper">
-                    <h1 class="hide-totally uppercase">Aerocue</h1>
-                    <h2 class="hide-totally">SpaceX</h2>
-                </div>
+              <canvas id="intro-canvas"></canvas>
 
-            </section>
+              <div class="intro-text-wrapper">
+                  <h1 class="hide-totally uppercase">Aerocube 8D</h1>
+                  <h2 class="hide-totally">Aerospace Corporation USA</h2>
+              </div>
+
+          </section>
+
+
+
 
             <section id="about">
 
@@ -56,132 +53,94 @@
 
                     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 padding">
 
-                        <img src="images/starlink1.jfif" alt="Alessio Santangelo" class="img-responsive img-restrict hide-totally" height="200px" width="200px">
+                        <img src={{ url_for('static', filename='images/aerocube.png') }} class="img-responsive img-restrict hide-totally" height="200px" width="200px">
 
                     </div>
 
                     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 padding">
 
-                        <img src="images/starLink2.jfif" alt="Alessio Santangelo" class="img-responsive img-restrict hide-totally" height="200px" width="200px">
+                        <img src={{ url_for('static', filename='images/aerocube2.png') }} class="img-responsive img-restrict hide-totally" height="200px" width="200px">
 
                     </div>
 
                     <div class="col-xs-12 col-sm-12 col-md-4 col-lg-6 padding">
 
-                        <p>With performance that far surpasses that of traditional satellite internet, and a global network unbounded by ground infrastructure limitations, Starlink will deliver high speed broadband internet to locations where access has been unreliable, expensive, or completely unavailable.
+                        <p>AeroCube-4 is a CubeSat technology demonstration mission within the PicoSat Program of The Aerospace Corporation, El Segundo, CA, USA. The AeroCube-4 CubeSat (a series of 3 spacecraft, is also designated as AC4-A, AC4-B and AC4-C). Two of the Aerospace-4 CubeSats were built for a national security agency. The third CubeSat was built for the for SMC/XR (Space and Missile Systems Center/Development Planning Directorate). The AeroCube-4 CubeSats represent a constellation of of 3 CubeSats operated by The Aerospace Corporation<br><br>
 
-Starlink is targeting service in the Northern U.S. and Canada in 2020, rapidly expanding to near global coverage of the populated world by 2021.</p>
+                            <h5>Spacecraft</h5><br>The SMC/XR AeroCube-4 is a CubeSat with a 1U form factor and a mass of ~ 1.2 kg that contains various "first of a kind" mission technologies, including solar panel wings that close and open to tune the ballistic coefficient enabling efficient formation flying, three-axis attitude control to 1º absolute accuracy. The AC4-C spacecraft maintains a launch vehicle environment data logger, which measures launch vibration in-situ, and contains a deorbit drag device that will be deployed at the end of its primary mission (size of 0.3 m2).
+                            <br><br>
+                             GPS receiver, designed and built at The Aerospace Corporation, is based on a terrestrial SDR (Software Defined Radio) receiver that was ported for space applications.
 
+                            • Deployable of two solar panels (each 9 cm x 10 cm)
+
+                            • Non-inflatable deorbit device
+
+                            • 3 cameras (1600 x 1200 CCDs)
+
+                            • 3 reaction wheel assembly (Figure 2)
+
+                            • 3 torque coils
+
+                            • Redundant architecture
+
+                            • On-orbit software reprogrammability
+
+                            • Lithium-Ion batteries (2 x 18650)
+
+                            • Magnet field sensors (HMC5883L magnetometer from Honeywell)
+
+                            • Earth and sun sensors
+
+                            • High fidelity 3-axis rate gyro </p>
                     </div>
 
                 </div>
 
             </section>
 
-            <section id="experience">
 
-                <h2 class="section-title align-center uppercase">Experience</h2>
 
-                <div class="row">
 
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 img-grid">
+        </div>
 
-                        <figure class="hide-totally">
-                            <img src="images/milano.jpg" class="img-responsive">
-                            <figcaption>
-                                <div class="caption-wrapper">
-                                    <h5><a class="magic-underlined" href="http://www.zodiakadvertising.com" target="_blank">Zodiak Advertising</a><br>Front-end developer<br>Milan</h5>
-                                </div>
-                            </figcaption>
-                        </figure>
 
-                    </div>
-
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 img-grid">
-
-                        <figure class="hide-totally">
-                            <img src="images/cairo-montenotte.jpg" class="img-responsive">
-                            <figcaption>
-                                <div class="caption-wrapper">
-                                    <h5><a class="magic-underlined" href="http://www.elco.it" target="_blank">El.Co.</a><br>Web developer<br>Cairo Montenotte</h5>
-                                </div>
-                            </figcaption>
-                        </figure>
-
-                    </div>
-
-                </div>
-
-                <div class="row">
-
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 img-grid">
-
-                        <figure class="hide-totally">
-                            <img src="images/savona.jpg" class="img-responsive">
-                            <figcaption>
-                                <div class="caption-wrapper">
-                                    <h5><a class="magic-underlined" href="http://www.gisdata.it/" target="_blank">GISData</a><br>Web developer<br>Savona</h5>
-                                </div>
-                            </figcaption>
-                        </figure>
-
-                    </div>
-
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 img-grid">
-
-                        <figure class="hide-totally">
-                            <img src="images/londra.jpg" class="img-responsive">
-                            <figcaption>
-                                <div class="caption-wrapper">
-                                    <h5><a class="magic-underlined" href="http://www.lecafeanglais.co.uk/" target="_blank">Le Café Anglais</a><br>Waiter<br>London</h5>
-                                </div>
-                            </figcaption>
-                        </figure>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-           
-
-            <section id="contacts" class="full">
+        <section id="contacts" class="full">
 
 
                 <div hidden id="map-canvas" class="width-100"></div>
 
 
-                
+
 
             </section>
 
-          
 
-        </div>
+
+
 
         <div class="msg-confirm-wrapper">
 
             <div class="msg-confirm">
 
                 <i class="icon-mail-opened"></i>
- 
+
             </div>
 
         </div>
-        <iframe src="https://findstarlink.com/#28.2667,North,83.8833,East;3"></iframe>
 
-        <script src="js/jquery.min.js"></script>
-        <script src="js/jQuery.resizeEnd.min.js"></script>
-        <script src="js/velocity.min.js"></script>
-        <script src="js/velocity.ui.min.js"></script>
-        <script src="js/waypoints.min.js"></script>
+        <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/jQuery.resizeEnd.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/velocity.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/velocity.ui.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/waypoints.min.js') }}"></script>
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-        <script src="js/portfolio.js"></script>
-        <script src="js/portfolio.animations.js"></script>
-        <script src="js/portfolio.animations.background.js"></script>
-        <script src="js/portfolio.maps.js"></script>
-       
+        <script src="{{ url_for('static', filename='js/portfolio.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/portfolio.animations.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/portfolio.animations.background.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/portfolio.maps.js') }}"></script>
+
     </body>
 
 </html>
+
+
