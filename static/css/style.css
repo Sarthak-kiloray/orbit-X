@@ -5,13 +5,13 @@
  * DEFAULTS
  *****************************************/
 /*
- * COLORS	
+ * COLORS
  *****************************************/
 /*
- * FONTS	
+ * FONTS
  *****************************************/
 /*
- * MARGIN & PADDING	
+ * MARGIN & PADDING
  *****************************************/
 /*
  * BREAKPOINTS (FROM BOOTSTRAP CONFIG)
@@ -1324,9 +1324,6 @@ th {
 .width-100, a.magic-underlined:hover:before, a.magic-underlined.active:before, input[type="text"], textarea, button:after, figure, figure figcaption .caption-wrapper h5 a:hover:before, .wrapper, section, .cv .divider:before, .cv .bar {
   width: 100%; }
 
-/*
- * MARGIN
- *****************************************/
 .no-margin, html, body, figure, figure figcaption .caption-wrapper h5, nav ul, nav li, .wrapper #intro h1, .wrapper #intro h2, .cv .detail, .cv .divider, .cv .divider:after, .cv .detail-circle, .cv .bar span {
   margin: 0; }
 
@@ -1341,9 +1338,6 @@ th {
   margin-left: 0;
   margin-right: 0; }
 
-/*
- * PADDING
- *****************************************/
 .no-padding, html, body, figure, nav ul, nav li, .wrapper #intro .intro-text-wrapper, .wrapper #intro h1, .wrapper #intro h2, section > .section-title, .cv .divider:after, .cv .detail-circle {
   padding: 0; }
 

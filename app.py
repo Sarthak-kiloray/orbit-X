@@ -16,6 +16,9 @@ def satellite():
 def strela():
     return render_template("strela.html")
 
+@app.route('/satellites')
+def satellites():
+    return render_template("satellites.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
