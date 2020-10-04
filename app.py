@@ -46,6 +46,14 @@ def microstat():
 def aerocue():
     return render_template("aerocue.html")
 
+@app.route('/directv')
+def directv():
+    return render_template("directv.html")
+
+@app.route('/navstar')
+def navstar():
+    return render_template("navstar.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
