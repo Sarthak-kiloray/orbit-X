@@ -7,12 +7,10 @@ using System.Linq;
 using System;
 
 
-public class move : MonoBehaviour
+public class solarmove : MonoBehaviour
 {
 
-    public GameObject target; // the target that the camera should look at
-    public GameObject Panel;
-
+    public GameObject target; 
 
     void Start()
     {
@@ -22,11 +20,11 @@ public class move : MonoBehaviour
             Debug.Log("ChangeLookAtTarget target not specified. Defaulting to parent GameObject 1111");
         }
     }
+
+
     void OnMouseDown()
     {
-
-        //Debug.Log("Magellon wala button");
-        Panel.gameObject.SetActive(true);
+        
 
         lookat.target = target;
         Camera.main.fieldOfView = 60 * target.transform.localScale.x;

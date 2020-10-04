@@ -5,15 +5,10 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class scene : MonoBehaviour
-{
-    
-    public void earth()
+{    
+    public void earthv()
     {
-        //CanvasGroup texnavstar1 = Canvas.GetComponent<CanvasGroup>();
-        //textnavstar1.gameObject.SetActive(false);
         SceneManager.LoadScene("earth");
-        
-
     }
     public void solar()
     {
