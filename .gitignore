@@ -59,3 +59,5 @@ sysinfo.txt
 unity3d/crashlytics-build.properties
 
 unity3d/Assets/GoogleVR
+
+unity3d/WebGL/
