@@ -12,6 +12,10 @@ def index():
 def satellite():
     return render_template("satellite.html")
 
+@app.route('/strela')
+def strela():
+    return render_template("strela.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)

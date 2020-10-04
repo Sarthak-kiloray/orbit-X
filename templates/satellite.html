@@ -6,7 +6,7 @@
   <body class="opening hide-UI view-2D zoom-large data-close controls-close">
     <div id="navbar">
       <a id="toggle-data" href="#data"><i class="icon-data"></i>Data</a>
-      <h1>3D Satellite System<br><span>by Baby Yoda</span></h1>
+      <h1>3D Satellite System<br><span>by BaBy YoDa</span></h1>
       <a id="toggle-controls" href="#controls"><i class="icon-controls"></i>Controls</a>
     </div>
     <div id="data">
@@ -28,16 +28,16 @@
         <input type="checkbox">
       </label> -->
       <label>
-        <input type="radio" class="set-speed" name="scale" checked>
-        <span>Speed</span>
+        <input type="radio" class="set-purpose" name="scale" checked>
+        <span>Purpose</span>
       </label>
       <label>
-        <input type="radio" class="set-size" name="scale">
-        <span>Size</span>
+        <input type="radio" class="set-tof" name="scale">
+        <span>Type of Orbit</span>
       </label>
       <label>
-        <input type="radio" class="set-distance" name="scale">
-        <span>Distance</span>
+        <input type="radio" class="set-COSPAR_Number" name="scale">
+        <span>COSPAR_Number</span>
       </label>
       <label>
         <input type="radio" class="set-date" name="scale">
@@ -91,7 +91,7 @@
           </div>
           <div id="venus" class="orbit">
             <div class="pos">
-              <a href="strela.html">
+              <a href={{ url_for('strela') }}>
               <div class="planet">
                 <dl class="infos">
                   <dt>Strela 3 (Cosmos 2409)</dt>
@@ -146,7 +146,6 @@
             <div class="pos">
               <a href="directv.html">
               <div class="planet">
-                <div class="ring"></div>
                 <dl class="infos">
                   <dt>DirecTV-9S</dt>
                   <dd><span></span></dd>
@@ -313,40 +312,13 @@ body {
   box-shadow: 0 0 60px rgba(0, 181, 204, 1); }
 
 .planet {
-  background-color: black;
+/*  background-color: black;*/
   background-repeat: no-repeat;
   background-size: cover;
   animation-iteration-count: infinite;
   animation-timing-function: linear; }
 
-/*.ring {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border-radius: 50%; }
 
-#saturn .ring {
-  width: 2em;
-  height: 2em;
-  margin-top: -1em;
-  margin-left: -1em;
-  border: 0.3em solid rgba(160, 147, 130, 0.7);
-  animation-iteration-count: infinite;
-  animation-timing-function: linear; }
-
-#saturn .ring:after {
-  border-radius: 50%;
-  position: absolute;
-  content: '';
-  top: 50%;
-  left: 50%;
-  width: 2.2em;
-  height: 2.2em;
-  margin-top: -1.1em;
-  margin-left: -1.1em;
-  border: 0.07em solid rgba(160, 147, 130, 0.5);
-  box-sizing: border-box;
-  box-sizing: border-box; }*/
 
 /* --------------------------------------------------------------------------- planets index */
 #mercury {
@@ -565,7 +537,7 @@ body {
 #neptune .pos,
 #neptune .planet,
 #neptune.orbit {
-  animation-duration: 1977.49584s; }
+  animation-duration: 1477.49584s; }
 
 /* --------------------------------------------------------------------------- planets sizes */
 /* --------------------------------------------------------------------------- stretched sizes */
@@ -671,7 +643,8 @@ body {
   width: 32em;
   height: 32em;
   margin-top: -16em;
-  margin-left: -16em; }
+  margin-left: -16em;
+  /*-webkit-animation: spin-right 15s linear infinite;*/}
 
 .scale-stretched #venus.orbit {
   width: 40em;
@@ -836,99 +809,99 @@ body {
 
 /* --------------------------------------------------------------------------- text infos data */
 /* --------------------------------------------------------------------------- speed */
-.set-speed dl.infos dd span:after {
-  content: 'Orbit Velocity'; }
+.set-purpose dl.infos dd span:after {
+  content: 'Purpose of satellite'; }
 
-.set-speed #sun dl.infos dd:after {
+.set-purpose #sun dl.infos dd:after {
   content: '107,218 km/h'; }
 
-.set-speed #mercury dl.infos dd:after {
-  content: '170,503 km/h'; }
+.set-purpose #mercury dl.infos dd:after {
+  content: 'Communications'; }
 
-.set-speed #venus dl.infos dd:after {
+.set-purpose #venus dl.infos dd:after {
   content: '126,074 km/h'; }
 
-.set-speed #earth dl.infos dd:after {
+.set-purpose #earth dl.infos dd:after {
   content: '107,218 km/h'; }
 
-.set-speed #mars dl.infos dd:after {
+.set-purpose #mars dl.infos dd:after {
   content: '86,677 km/h'; }
 
-.set-speed #jupiter dl.infos dd:after {
+.set-purpose #jupiter dl.infos dd:after {
   content: '47,002 km/h'; }
 
-.set-speed #saturn dl.infos dd:after {
+.set-purpose #saturn dl.infos dd:after {
   content: '34,701 km/h'; }
 
-.set-speed #uranus dl.infos dd:after {
+.set-purpose #uranus dl.infos dd:after {
   content: '24,477 km/h'; }
 
-.set-speed #neptune dl.infos dd:after {
+.set-purpose #neptune dl.infos dd:after {
   content: '19,566 km/h'; }
 
 /* --------------------------------------------------------------------------- size */
-.set-size dl.infos dd span:after {
-  content: 'Equatorial Circumference'; }
+.set-tof dl.infos dd span:after {
+  content: 'Type of Orbit'; }
 
-.set-size #sun dl.infos dd:after {
+.set-tof #sun dl.infos dd:after {
   content: '4,370,005 km'; }
 
-.set-size #mercury dl.infos dd:after {
-  content: '15,329 km'; }
+.set-tof #mercury dl.infos dd:after {
+  content: 'Non-Polar Inclined'; }
 
-.set-size #venus dl.infos dd:after {
+.set-tof #venus dl.infos dd:after {
   content: '38,024 km'; }
 
-.set-size #earth dl.infos dd:after {
+.set-tof #earth dl.infos dd:after {
   content: '40,030 km'; }
 
-.set-size #mars dl.infos dd:after {
+.set-tof #mars dl.infos dd:after {
   content: '21,296 km'; }
 
-.set-size #jupiter dl.infos dd:after {
+.set-tof #jupiter dl.infos dd:after {
   content: '439,263 km'; }
 
-.set-size #saturn dl.infos dd:after {
+.set-tof #saturn dl.infos dd:after {
   content: '365,882 km'; }
 
-.set-size #uranus dl.infos dd:after {
+.set-tof #uranus dl.infos dd:after {
   content: '159,354 km'; }
 
-.set-size #neptune dl.infos dd:after {
+.set-tof #neptune dl.infos dd:after {
   content: '154,704 km'; }
 
 /* --------------------------------------------------------------------------- distance */
-.set-distance dl.infos dd span:after {
-  content: 'From Sun'; }
+.set-COSPAR_Number dl.infos dd span:after {
+  content: 'COSPAR_Number'; }
 
-.set-distance #sun dl.infos dd span:after {
-  content: 'From Earth'; }
+.set-COSPAR_Number #sun dl.infos dd span:after {
+  content: 'COSPAR_Number'; }
 
-.set-distance #sun dl.infos dd:after {
+.set-COSPAR_Number #sun dl.infos dd:after {
   content: '149,598,262 km'; }
 
-.set-distance #mercury dl.infos dd:after {
+.set-COSPAR_Number #mercury dl.infos dd:after {
   content: '57,909,227 km'; }
 
-.set-distance #venus dl.infos dd:after {
+.set-COSPAR_Number #venus dl.infos dd:after {
   content: '108,209,475 km'; }
 
-.set-distance #earth dl.infos dd:after {
+.set-COSPAR_Number #earth dl.infos dd:after {
   content: '149,598,262 km'; }
 
-.set-distance #mars dl.infos dd:after {
+.set-COSPAR_Number #mars dl.infos dd:after {
   content: '227,943,824 km'; }
 
-.set-distance #jupiter dl.infos dd:after {
+.set-COSPAR_Number #jupiter dl.infos dd:after {
   content: '778,340,821 km'; }
 
-.set-distance #saturn dl.infos dd:after {
+.set-COSPAR_Number #saturn dl.infos dd:after {
   content: '1,426,666,422 km'; }
 
-.set-distance #uranus dl.infos dd:after {
+.set-COSPAR_Number #uranus dl.infos dd:after {
   content: '2,870,658,186 km'; }
 
-.set-distance #neptune dl.infos dd:after {
+.set-COSPAR_Number #neptune dl.infos dd:after {
   content: '4,498,396,441 km'; }
 
 /* --------------------------------------------------------------------------- planets starting position and lighting effect */
@@ -936,37 +909,37 @@ body {
 
 
 .set-date dl.infos dd span:after {
-  content: 'From Sun'; }
+  content: 'Date of launch'; }
 
 .set-date #sun dl.infos dd span:after {
-  content: 'From Earth'; }
+  content: 'Date of launch'; }
 
 .set-date #sun dl.infos dd:after {
   content: '2069-6-9'; }
 
 .set-date #mercury dl.infos dd:after {
-  content: '2069-6-9'; }
+  content: '2020-7-1'; }
 
 .set-date #venus dl.infos dd:after {
-  content: '2069-6-9'; }
+  content: '2004-9-23'; }
 
 .set-date #earth dl.infos dd:after {
-  content: '2069-6-9'; }
+  content: '2011-4-22'; }
 
 .set-date #mars dl.infos dd:after {
-  content: '2069-6-9'; }
+  content: '2013-2-25'; }
 
 .set-date #jupiter dl.infos dd:after {
-  content: '2069-6-9'; }
+  content: '2011-11-26'; }
 
 .set-date #saturn dl.infos dd:after {
-  content: '2069-6-9'; }
+  content: '2019-6-19'; }
 
 .set-date #uranus dl.infos dd:after {
-  content: '2069-6-9'; }
+  content: '2013-2-3'; }
 
 .set-date #neptune dl.infos dd:after {
-  content: '2069-6-9'; }
+  content: '2009-17-8'; }
 
 
 /**************************************************************************/
@@ -976,37 +949,37 @@ body {
 
 
 .set-life dl.infos dd span:after {
-  content: 'From Sun'; }
+  content: 'LIFE'; }
 
 .set-life #sun dl.infos dd span:after {
-  content: 'From Earth'; }
+  content: 'Expectancy'; }
 
 .set-life #sun dl.infos dd:after {
   content: '69'; }
 
 .set-life #mercury dl.infos dd:after {
-  content: '69'; }
+  content: 'NA'; }
 
 .set-life #venus dl.infos dd:after {
-  content: '69'; }
+  content: '3 years'; }
 
 .set-life #earth dl.infos dd:after {
-  content: '69'; }
+  content: '15 years'; }
 
 .set-life #mars dl.infos dd:after {
-  content: '69'; }
+  content: '10 years'; }
 
 .set-life #jupiter dl.infos dd:after {
-  content: '69'; }
+  content: '1 year'; }
 
 .set-life #saturn dl.infos dd:after {
-  content: '69'; }
+  content: '15 years'; }
 
 .set-life #uranus dl.infos dd:after {
-  content: '69'; }
+  content: '15 years'; }
 
 .set-life #neptune dl.infos dd:after {
-  content: '69'; }
+  content: '10 years'; }
 
 
 /**************************************************************************/
@@ -1018,37 +991,37 @@ body {
 
 
 .set-owner dl.infos dd span:after {
-  content: 'From Sun'; }
+  content: 'Origin Country'; }
 
 .set-owner #sun dl.infos dd span:after {
-  content: 'From Earth'; }
+  content: 'Origin Country'; }
 
 .set-owner #sun dl.infos dd:after {
   content: 'Myself'; }
 
 .set-owner #mercury dl.infos dd:after {
-  content: 'Myself'; }
+  content: 'USA'; }
 
 .set-owner #venus dl.infos dd:after {
-  content: 'Myself'; }
+  content: 'Russia'; }
 
 .set-owner #earth dl.infos dd:after {
-  content: 'Myself'; }
+  content: 'UAE'; }
 
 .set-owner #mars dl.infos dd:after {
-  content: 'Myself'; }
+  content: 'CANADA'; }
 
 .set-owner #jupiter dl.infos dd:after {
-  content: 'Myself'; }
+  content: 'USA (private)'; }
 
 .set-owner #saturn dl.infos dd:after {
-  content: 'Myself'; }
+  content: 'USA'; }
 
 .set-owner #uranus dl.infos dd:after {
-  content: 'Myself'; }
+  content: 'France'; }
 
 .set-owner #neptune dl.infos dd:after {
-  content: 'Myself'; }
+  content: 'USA'; }
 
 
 /**************************************************************************/
@@ -1058,37 +1031,37 @@ body {
 
 
 .set-mass dl.infos dd span:after {
-  content: 'From Sun'; }
+  content: 'Dry Mass'; }
 
 .set-mass #sun dl.infos dd span:after {
-  content: 'From Earth'; }
+  content: 'Dry Mass'; }
 
 .set-mass #sun dl.infos dd:after {
   content: '4200KG'; }
 
 .set-mass #mercury dl.infos dd:after {
-  content: '4200KG'; }
+  content: '227KG'; }
 
 .set-mass #venus dl.infos dd:after {
-  content: '4200KG'; }
+  content: '225KG'; }
 
 .set-mass #earth dl.infos dd:after {
-  content: '4200KG'; }
+  content: '5953KG'; }
 
 .set-mass #mars dl.infos dd:after {
-  content: '4200KG'; }
+  content: '74KG'; }
 
 .set-mass #jupiter dl.infos dd:after {
-  content: '4200KG'; }
+  content: '1200KG'; }
 
 .set-mass #saturn dl.infos dd:after {
-  content: '4200KG'; }
+  content: '5500KG'; }
 
 .set-mass #uranus dl.infos dd:after {
-  content: '4200KG'; }
+  content: '700KG'; }
 
 .set-mass #neptune dl.infos dd:after {
-  content: '4200KG'; }
+  content: '2059KG'; }
 
 
 /**************************************************************************/
@@ -1099,10 +1072,10 @@ body {
 
 
 .set-contractor dl.infos dd span:after {
-  content: 'From Sun'; }
+  content: 'Contractor'; }
 
 .set-contractor #sun dl.infos dd span:after {
-  content: 'From Earth'; }
+  content: 'Contracto'; }
 
 .set-contractor #sun dl.infos dd:after {
   content: 'SpaceX'; }
@@ -1111,25 +1084,25 @@ body {
   content: 'SpaceX'; }
 
 .set-contractor #venus dl.infos dd:after {
-  content: 'SpaceX'; }
+  content: 'NPO/PM (NII-TP)'; }
 
 .set-contractor #earth dl.infos dd:after {
-  content: 'SpaceX'; }
+  content: 'Astrium/Thales Alenia Space'; }
 
 .set-contractor #mars dl.infos dd:after {
-  content: 'SpaceX'; }
+  content: 'Microsat Systems Canada Inc.'; }
 
 .set-contractor #jupiter dl.infos dd:after {
-  content: 'SpaceX'; }
+  content: 'Aerospace Corporation'; }
 
 .set-contractor #saturn dl.infos dd:after {
-  content: 'SpaceX'; }
+  content: 'Space Systems/Loral'; }
 
 .set-contractor #uranus dl.infos dd:after {
-  content: 'SpaceX'; }
+  content: 'Thales Alenia Space'; }
 
 .set-contractor #neptune dl.infos dd:after {
-  content: 'SpaceX'; }
+  content: 'Lockheed Martin Missiles & Space'; }
 
 
 /**************************************************************************/
@@ -1140,37 +1113,37 @@ body {
 
 
 .set-site dl.infos dd span:after {
-  content: 'From Sun'; }
+  content: 'Launch Site'; }
 
 .set-site #sun dl.infos dd span:after {
-  content: 'From Earth'; }
+  content: 'Launch Site'; }
 
 .set-site #sun dl.infos dd:after {
   content: 'Dumping Site'; }
 
 .set-site #mercury dl.infos dd:after {
-  content: 'Dumping Site'; }
+  content: 'Cape Canaveral'; }
 
 .set-site #venus dl.infos dd:after {
-  content: 'Dumping Site'; }
+  content: 'Plesetsk Cosmodrome'; }
 
 .set-site #earth dl.infos dd:after {
-  content: 'Dumping Site'; }
+  content: 'Guiana Space Center'; }
 
 .set-site #mars dl.infos dd:after {
-  content: 'Dumping Site'; }
+  content: 'Satish Dhawan Space Centre'; }
 
 .set-site #jupiter dl.infos dd:after {
-  content: 'Dumping Site'; }
+  content: 'Vandenberg AFB'; }
 
 .set-site #saturn dl.infos dd:after {
-  content: 'Dumping Site'; }
+  content: 'Guiana Space Center'; }
 
 .set-site #uranus dl.infos dd:after {
-  content: 'Dumping Site'; }
+  content: 'Baikonur Cosmodrome'; }
 
 .set-site #neptune dl.infos dd:after {
-  content: 'Dumping Site'; }
+  content: 'Cape Canaveral'; }
 
 
 /**************************************************************************/
@@ -1181,37 +1154,37 @@ body {
 
 
 .set-vehicle dl.infos dd span:after {
-  content: 'From Sun'; }
+  content: 'Launch Vehicle'; }
 
 .set-vehicle #sun dl.infos dd span:after {
-  content: 'From Earth'; }
+  content: 'Launch Vehicle'; }
 
 .set-vehicle #sun dl.infos dd:after {
   content: 'Satapdi'; }
 
 .set-vehicle #mercury dl.infos dd:after {
-  content: 'Satapdi'; }
+  content: 'Falcon9'; }
 
 .set-vehicle #venus dl.infos dd:after {
-  content: 'Satapdi'; }
+  content: 'Kosmos 3M'; }
 
 .set-vehicle #earth dl.infos dd:after {
-  content: 'Satapdi'; }
+  content: 'Ariane 5'; }
 
 .set-vehicle #mars dl.infos dd:after {
-  content: 'Satapdi'; }
+  content: 'PSLV'; }
 
 .set-vehicle #jupiter dl.infos dd:after {
-  content: 'Satapdi'; }
+  content: 'Atlas 5'; }
 
 .set-vehicle #saturn dl.infos dd:after {
-  content: 'Satapdi'; }
+  content: 'Ariane 5 ECA'; }
 
 .set-vehicle #uranus dl.infos dd:after {
-  content: 'Satapdi'; }
+  content: 'Soyuz.2.1a/Fregat'; }
 
 .set-vehicle #neptune dl.infos dd:after {
-  content: 'Satapdi'; }
+  content: 'Delta 2'; }
 
 
 /**************************************************************************/
@@ -1626,7 +1599,7 @@ dl.infos dd span:after {
 .saturn #saturn.orbit,
 .uranus #uranus.orbit,
 .neptune #neptune.orbit {
-  border: 1px solid rgba(255, 255, 255, 0.8); }
+  border: 1px solid rgba(255, 255, 255, 1); }
 
 .hide-UI h1,
 .hide-UI #data,
@@ -1898,31 +1871,31 @@ body {
   background-image: url(https://www.freeiconspng.com/thumbs/earth-png/globe-earth-png-22.png); }
 
 #mercury .planet {
-  background-image: url(satellite.jpg); }
+  background-image: url(https://img.icons8.com/color/2x/satellite.png); }
 
 #venus .planet {
-  background-image: url(satellite.jpg); }
+  background-image: url(https://img.icons8.com/color/2x/satellite.png); }
 
 #earth .planet {
-  background-image: url(satellite.jpg); }
+  background-image: url(https://img.icons8.com/color/2x/satellite.png); }
 
-#earth .moon {
-  background-color: black; }
+/*#earth .moon {
+  background-color: black; }*/
 
 #mars .planet {
-  background-image: url(satellite.jpg); }
+  background-image: url(https://img.icons8.com/color/2x/satellite.png); }
 
 #jupiter .planet {
-  background-image: url(satellite.jpg); }
+  background-image: url(https://img.icons8.com/color/2x/satellite.png); }
 
 #saturn .planet {
-  background-image: url(satellite.jpg); }
+  background-image: url(https://img.icons8.com/color/2x/satellite.png); }
 
 #uranus .planet {
-  background-image: url(satellite.jpg); }
+  background-image: url(https://img.icons8.com/color/2x/satellite.png); }
 
 #neptune .planet {
-  background-image: url(satellite.jpg); }
+  background-image: url(https://img.icons8.com/color/2x/satellite.png); }
 
 /* --------------------------------------------------------------------------- responsive styles */
 @media screen and (max-width: 299px) {
@@ -1979,6 +1952,10 @@ body {
 @media screen and (min-width: 1300px) {
   #universe {
     font-size: 100%; } }
+@-webkit-keyframes spin-right {
+  100% {
+    -webkit-transform: rotate(360deg);
+  } }
 @media screen and (min-width: 1600px) {
   .zoom-close .scale-d #solar-system {
     margin-left: -120%; } }
@@ -2019,9 +1996,9 @@ body {
 
   $(".set-view").click(function() { body.toggleClass("view-3D view-2D"); });
   $(".set-zoom").click(function() { body.toggleClass("zoom-large zoom-close"); });
-  $(".set-speed").click(function() { setView("scale-stretched set-speed"); });
-  $(".set-size").click(function() { setView("scale-stretched set-size"); });
-  $(".set-distance").click(function() { setView("scale-stretched set-distance"); });
+  $(".set-purpose").click(function() { setView("scale-stretched set-purpose"); });
+  $(".set-tof").click(function() { setView("scale-stretched set-tof"); });
+  $(".set-COSPAR_Number").click(function() { setView("scale-stretched set-distance"); });
   $(".set-date").click(function() { setView("scale-stretched set-date"); });
   $(".set-life").click(function() { setView("scale-stretched set-life"); });
   $(".set-owner").click(function() { setView("scale-stretched set-owner"); });
